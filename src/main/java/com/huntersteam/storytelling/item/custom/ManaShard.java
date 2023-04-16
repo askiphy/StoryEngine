@@ -28,10 +28,7 @@ public class ManaShard extends Item {
     @Override
     public ActionResultType onItemUseFirst(ItemStack stack, ItemUseContext context) {
         Minecraft minecraft = Minecraft.getInstance();
-        List<String> dialogOptions = new ArrayList<>();
-        dialogOptions.add("Опция 1");
-        dialogOptions.add("Отдать осколки");
-        minecraft.displayGuiScreen(new ChoiceGui(dialogOptions));
+        minecraft.displayGuiScreen(new DialogueGui());
         return super.onItemUseFirst(stack, context);
     }
 
