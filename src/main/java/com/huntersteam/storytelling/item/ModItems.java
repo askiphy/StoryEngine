@@ -19,6 +19,9 @@ public class ModItems {
     public static final RegistryObject<Item> ZENHUNT_HEAD = ITEMS.register("zenhunt_head",
             () -> new Item(new Item.Properties().group(ModItemGroup.STORYTELLING_GROUP).rarity(Rarity.EPIC)));
 
+    public static final RegistryObject<Item> MAGIC_WAND = ITEMS.register("magic_wand",
+            () -> new Item(new Item.Properties().group(ModItemGroup.STORYTELLING_GROUP).rarity(Rarity.EPIC)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

@@ -2,9 +2,14 @@ package com.huntersteam.storytelling.item.custom;
 
 import com.huntersteam.storytelling.gui.ChoiceGui;
 import com.huntersteam.storytelling.gui.DialogueGui;
+// import com.huntersteam.storytelling.gui.SpellSelectionGui;
+import com.huntersteam.storytelling.spell.Spell;
+import com.huntersteam.storytelling.spell.SpellRegistry;
+//import com.huntersteam.storytelling.story.EntityUtils;
 import com.huntersteam.storytelling.story.Story;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -36,4 +41,27 @@ public class ManaShard extends Item {
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         tooltip.add(new TranslationTextComponent("tooltip.storytelling.mana_shard"));
     }
+
+    /*
+    public void selectSpell(PlayerEntity player) {
+        for (Spell spell : SpellRegistry.getSpells()) {
+            if (spell.canCast(player) && player.experienceLevel >= spell.getCost()) {
+                Entity target = null;
+                switch (spell.getTargetType()) {
+                    case SELF:
+                        target = player;
+                        break;
+                    case MOB_IN_SIGHT:
+                        target = EntityUtils.getClosestEntityInSight(player, 10.0);
+                        break;
+                }
+                if (target != null) {
+                    spell.cast(player, target);
+                }
+                return;
+            }
+        }
+    }
+     */
 }
+
